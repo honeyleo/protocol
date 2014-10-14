@@ -1,0 +1,14 @@
+package NetProtocol;
+option java_package = "cn.huizhi.message";
+option java_outer_classname = "PBMessagePro";
+option optimize_for = SPEED;
+message PBMessage {
+	optional int32 cmd = 1;			// 命令
+	optional int32 seq = 2;			// 保留字段
+  	optional string id = 3;			// ID
+  	optional int32 status = 4;		// 状态
+	optional bytes data = 5;		// 数据
+	optional int32 sessionId = 6;	// 唯一的SessionId
+	optional bool is_succ = 7;		// 是否成功
+	optional bool is_return = 8 [default=true];	// 是否需要应答
+}

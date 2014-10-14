@@ -1,0 +1,8 @@
+package NetProtocol;
+option java_package = "cn.huizhi.message.player";
+option java_outer_classname = "LoginByPidReqPro";
+option optimize_for = SPEED;
+
+message LoginByPidReq {
+	optional int32 pid = 1;
+}
